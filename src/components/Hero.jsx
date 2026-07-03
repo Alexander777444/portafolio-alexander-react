@@ -1,6 +1,6 @@
 function Hero() {
     return (
-        <header class="hero" id="inicio">
+        <header className="hero" id="inicio">
     <div className="hero-content">
 
       <div className="hero-info">

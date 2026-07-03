@@ -13,12 +13,12 @@ function Navbar() {
   return (
     <nav id="navbar" aria-label="Navegación principal">
 
-    <a href="#inicio" class="nav-logo">
-      <span class="icon icon--laptop-code icon--nav" aria-hidden="true"></span>
+    <a href="#inicio" className="nav-logo">
+      <span className="icon icon--laptop-code icon--nav" aria-hidden="true"></span>
       <span>AB</span>
     </a>
 
-    <ul class="nav-links" id="nav-links">
+    <ul className="nav-links" id="nav-links">
       <li><a href="#sobre-mi">Sobre mí</a></li>
       <li><a href="#tecnologias">Tecnologías</a></li>
       <li><a href="#proyectos">Proyectos</a></li>
@@ -26,16 +26,16 @@ function Navbar() {
       <li><a href="#extra">Extra</a></li>
     </ul>
 
-    <div class="nav-social">
+    <div className="nav-social">
       <a href="https://github.com/Alexander777444" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
-        <span class="icon icon--github icon--md" aria-hidden="true"></span>
+        <span className="icon icon--github icon--md" aria-hidden="true"></span>
       </a>
       <a href="https://www.linkedin.com/in/enrique-alexander-bolanos-gutierrez-79b83037a/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-        <span class="icon icon--linkedin icon--md" aria-hidden="true"></span>
+        <span className="icon icon--linkedin icon--md" aria-hidden="true"></span>
       </a>
     </div>
 
-    <button class="nav-burger" id="navBurger" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="nav-links">
+    <button className="nav-burger" id="navBurger" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="nav-links">
       <span></span>
       <span></span>
       <span></span>

@@ -9,7 +9,7 @@ function Avatar() {
 
   return (
     <img
-      src="../assets/hero.png"
+      src="/avatarAlexander.jpg"
       alt="Alexander Bolaños"
       className="avatar"
       onError={() => setError(true)}
