@@ -12,7 +12,7 @@ function Skills() {
           {skills.map((skill) => (
             <div key={skill.name} className="tech-chip">
               <img
-                src={skill.icon}
+                src={skill.svg}
                 alt={skill.name}
                 className="tech-svg"
               />
