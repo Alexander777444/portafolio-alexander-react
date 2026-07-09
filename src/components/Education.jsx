@@ -1,8 +1,11 @@
 import { education } from '../data/education'
+import { useScrollReveal } from '../hooks/useScrollReveal'
 
 function Education() {
+  const ref = useScrollReveal()
+
   return (
-    <section id="formacion" className="seccion">
+    <section ref={ref} id="formacion" className="seccion revelar">
       <div className="seccion-interior">
         <h2 className="seccion-titulo">Formación</h2>
         <div className="linea-tiempo">

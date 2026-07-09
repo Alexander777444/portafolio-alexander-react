@@ -1,8 +1,11 @@
 import { extras } from '../data/extras'
+import { useScrollReveal } from '../hooks/useScrollReveal'
 
 function Extras() {
+  const ref = useScrollReveal()
+
   return (
-    <section id="formacion" className="seccion">
+    <section ref={ref} id="extra" className="seccion revelar">
       <div className="seccion-interior">
         <h2 className="seccion-titulo">Logros y certificados</h2>
         <div className="extra-grid">

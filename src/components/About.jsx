@@ -1,6 +1,10 @@
+import { useScrollReveal } from '../hooks/useScrollReveal'
+
 function About() {
-    return (
-        <section id="sobre-mi" className="seccion" aria-labelledby="titulo-sobre-mi">
+  const ref = useScrollReveal()
+
+  return (
+    <section ref={ref} id="sobre-mi" className="seccion revelar" aria-labelledby="titulo-sobre-mi">
       <div className="seccion-interior">
         <h2 className="seccion-titulo" id="titulo-sobre-mi">About me</h2>
         <p className="sobre-texto">
@@ -8,7 +12,7 @@ function About() {
         </p>
       </div>
     </section>
-    )
+  )
 }
 
 export default About
