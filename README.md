@@ -1,16 +1,58 @@
-# React + Vite
+# Portafolio React
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Personal portfolio website for Enrique Alexander Bolaños Gutiérrez, built with React and Vite.
 
-Currently, two official plugins are available:
+## Description
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+This project is a personal portfolio designed to present the developer's profile, skills, projects, education, and additional achievements in a modern and focused layout. The site is built as a single-page experience with a dark theme and red accents.
 
-## React Compiler
+## Tech Stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- React
+- Vite
+- CSS3 (modular by file)
+- JavaScript ES6+
+- Google Fonts (Space Mono + DM Sans)
 
-## Expanding the ESLint configuration
+## Project Structure
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+```text
+src/
+  components/
+  data/
+  hooks/
+  styles/
+public/
+  Assets/
+```
+
+## Portfolio Sections
+
+- Navbar
+- Hero
+- Sobre mí
+- Tecnologías
+- Proyectos
+- Formación
+- Extras
+- Footer
+
+## Run Locally
+
+```bash
+git clone https://github.com/Alexander777444/portafolio-alexander-react
+npm install
+npm run dev
+```
+
+## Current Status
+
+The project is currently in active development.
+
+## Author
+
+Enrique Alexander Bolaños Gutiérrez
+
+LinkedIn: https://www.linkedin.com/in/alexanderbgutierrez4/
+GitHub: https://github.com/Alexander777444
+
