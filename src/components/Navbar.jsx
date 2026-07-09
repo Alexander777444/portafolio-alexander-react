@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 
+
 function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false)
   const [scrolled, setScrolled] = useState(false)
