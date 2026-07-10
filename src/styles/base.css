@@ -4,11 +4,17 @@
   --fondo-alt: #0f0f0f;
   --superficie: #151515;
   --borde: #1e1e1e;
+  --bg-deep: #0a0a0a;
+  --glass-bg: rgba(255,255,255,0.045);
+  --glass-bg-strong: rgba(255,255,255,0.08);
+  --glass-border: rgba(255,255,255,0.1);
 
   /* Colores de acento (rojo) */
   --acento: #cc0000;
   --acento-oscuro: #900000;
   --acento-brillo: #2b0000;
+  --red: #dc2626;
+  --red-deep: #7f1d1d;
 
   /* Colores de texto */
   --texto: #e8e8e8;
@@ -21,6 +27,8 @@
 
   /* Otros */
   --radio: 10px;
+  --radius-lg: 24px;
+  --radius-md: 16px;
   --alto-nav: 52px;
   --transicion: 0.25s ease;
 }
@@ -37,12 +45,110 @@ html {
 
 body {
   min-height: 100vh;
-  background: #080808;
+  background: var(--bg-deep);
   color: var(--texto);
   font-family: var(--fuente-sans);
   font-size: 16px;
   line-height: 1.7;
   overflow-x: hidden;
+}
+
+#root {
+  position: relative;
+  isolation: isolate;
+  min-height: 100vh;
+  background: linear-gradient(180deg, rgba(10, 10, 10, 0.98) 0%, rgba(10, 10, 10, 1) 100%);
+}
+
+.background-glow {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  overflow: hidden;
+  background: radial-gradient(circle at top left, rgba(220, 38, 38, 0.12), transparent 35%),
+    radial-gradient(circle at 82% 20%, rgba(127, 29, 29, 0.1), transparent 30%),
+    linear-gradient(180deg, rgba(10, 10, 10, 0.92) 0%, rgba(10, 10, 10, 1) 100%);
+}
+
+.background-glow .orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(95px);
+  opacity: 0.42;
+  transform: translate3d(0, 0, 0);
+  will-change: transform, opacity;
+  pointer-events: none;
+  animation-duration: 28s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+
+.background-glow .orb-one {
+  width: 500px;
+  height: 500px;
+  top: -90px;
+  left: -70px;
+  background: radial-gradient(circle, var(--red) 0%, rgba(220, 38, 38, 0.25) 38%, transparent 72%);
+  animation-name: drift-orb-one;
+}
+
+.background-glow .orb-two {
+  width: 560px;
+  height: 560px;
+  right: -130px;
+  top: 60px;
+  background: radial-gradient(circle, var(--red-deep) 0%, rgba(127, 29, 29, 0.28) 42%, transparent 74%);
+  animation-name: drift-orb-two;
+  animation-duration: 32s;
+  opacity: 0.36;
+}
+
+.background-glow .orb-three {
+  width: 430px;
+  height: 430px;
+  bottom: -80px;
+  right: 18%;
+  background: radial-gradient(circle, var(--red) 0%, rgba(220, 38, 38, 0.2) 36%, transparent 74%);
+  animation-name: drift-orb-three;
+  animation-duration: 30s;
+  opacity: 0.34;
+}
+
+@keyframes drift-orb-one {
+  0%, 100% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+  33% {
+    transform: translate3d(90px, 55px, 0) scale(1.06);
+  }
+  66% {
+    transform: translate3d(40px, -70px, 0) scale(0.94);
+  }
+}
+
+@keyframes drift-orb-two {
+  0%, 100% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+  33% {
+    transform: translate3d(-120px, 70px, 0) scale(1.08);
+  }
+  66% {
+    transform: translate3d(-50px, -90px, 0) scale(0.95);
+  }
+}
+
+@keyframes drift-orb-three {
+  0%, 100% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+  33% {
+    transform: translate3d(60px, -45px, 0) scale(1.04);
+  }
+  66% {
+    transform: translate3d(-80px, 40px, 0) scale(0.96);
+  }
 }
 
 img {
@@ -114,6 +220,10 @@ button:focus-visible {
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
+  }
+
+  .background-glow .orb {
+    animation: none;
   }
 
   .revelar {
