@@ -9,6 +9,26 @@
   overflow: hidden;
 }
 
+.cursor-glow {
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(220, 38, 38, 0.25), transparent 70%);
+  filter: blur(40px);
+  pointer-events: none;
+  left: var(--x, 50%);
+  top: var(--y, 50%);
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 0;
+}
+
+.cursor-glow.is-active {
+  opacity: 1;
+}
+
 .hero::before {
   content: '';
   position: absolute;
