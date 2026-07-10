@@ -1,7 +1,14 @@
+import { useRef } from 'react'
+import { useCursorGlow } from '../hooks/useCursorGlow'
+
 function Hero() {
+    const heroRef = useRef(null)
+    const isCursorActive = useCursorGlow(heroRef)
+
     return (
-        <header className="hero" id="inicio">
-    <div className="hero-content">
+        <header ref={heroRef} className="hero" id="inicio">
+            <div className={`cursor-glow${isCursorActive ? ' is-active' : ''}`} aria-hidden="true" />
+            <div className="hero-content">
 
       <div className="hero-info">
         <p className="hero-tag">Software Developer</p>
