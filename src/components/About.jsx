@@ -8,7 +8,7 @@ function About() {
       <div className="seccion-interior">
         <h2 className="seccion-titulo" id="titulo-sobre-mi">About me</h2>
         <div className="glass-card">
-          <p className="sobre-texto">
+          <span className="sobre-texto">
           6th-semester Computer Science student at Universidad de Guadalajara, passionate about software development and the intersection of efficient code and user-centered design.
   
 While my current strength and primary experience are focused on modern web development using the React ecosystem, I possess solid foundations in engineering, data structures, and algorithms. This allows me to adapt quickly, solve logical problems, and learn new technologies with ease, all while combining UI/UX design principles with strict web accessibility standards and responsive for mobiles.
@@ -25,7 +25,7 @@ Professional Goal:
   Currently seeking Internship opportunities focused on general software development. My goal is to add immediate value through my current knowledge while adapting to and mastering new tools within the organization's stack.
   
 Areas of interest: Software Engineering, Web Development (Frontend / Full Stack), Python Development, and general software engineering.
-          </p>
+          </span>
         </div>
       </div>
     </section>
