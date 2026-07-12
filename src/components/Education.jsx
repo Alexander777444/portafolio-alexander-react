@@ -12,7 +12,7 @@ function Education() {
           {education.map((item) => (
             <div key={item.id} className="tiempo-item">
               <div className="tiempo-punto" />
-              <div className="tiempo-contenido">
+              <div className="tiempo-contenido glass-card">
                 <div className="tiempo-cabecera">
                   <div>
                     <p className="tiempo-titulo">{item.institution}</p>
