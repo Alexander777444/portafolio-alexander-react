@@ -8,9 +8,13 @@ function MarqueeRow({ items, directionClass, label }) {
     <div className={`marquee-row ${directionClass}`} aria-label={label}>
       <div className="marquee-track">
         {duplicatedItems.map((skill, index) => (
-          <div key={`${skill.id}-${index}`} className="tech-chip">
-            <img src={skill.svg} alt={skill.name} className="tech-svg" />
-            <span className="tech-nombre">{skill.name}</span>
+          <div
+            key={`${skill.id}-${index}`}
+            className="tech-chip"
+            aria-label={skill.name}
+            title={skill.name}
+          >
+            <img src={skill.svg} alt="" aria-hidden="true" className="tech-svg" />
           </div>
         ))}
       </div>

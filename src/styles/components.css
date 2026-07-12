@@ -101,10 +101,40 @@
 
 .marquee-track {
   display: flex;
-  gap: 16px;
+  gap: 20px;
   width: max-content;
   will-change: transform;
   padding-block: 0.25rem;
+}
+
+.marquee-track .tech-chip {
+  width: 100px;
+  height: 100px;
+  padding: 0;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.28);
+  transition: transform 7.5s ease, background-color 0.25s ease, border-color 0.25s ease;
+  flex-shrink: 0;
+}
+
+.marquee-track .tech-chip:hover {
+  transform: scale(1.08);
+  background: var(--glass-bg-strong);
+  border-color: rgba(255,255,255,0.18);
+}
+
+.marquee-track .tech-svg {
+  width: 28px;
+  height: 28px;
+  object-fit: contain;
+  flex-shrink: 0;
 }
 
 .marquee-row:hover .marquee-track {

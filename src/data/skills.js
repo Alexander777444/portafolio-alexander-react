@@ -1,5 +1,6 @@
 export const skills = {
   languages: [
+    { id: 'React', name: 'React', svg: '/Assets/icons/react.svg' },
     { id: 'HTML5', name: 'HTML5', svg: '/Assets/icons/html5.svg' },
     { id: 'CSS3', name: 'CSS3', svg: '/Assets/icons/css.svg' },
     { id: 'JavaScript', name: 'JavaScript', svg: '/Assets/icons/js-icon.svg' },
