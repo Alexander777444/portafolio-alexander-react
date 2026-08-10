@@ -10,7 +10,7 @@ function Extras() {
         <h2 className="seccion-titulo">Logros y certificados</h2>
         <div className="extra-grid">
           {extras.map((item) => (
-            <div key={item.id} className="extra-card">
+            <div key={item.id} className="extra-card glass-card">
               <div className="extra-img-wrap">
                 {item.imageUrl && (
                   <img

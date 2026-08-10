@@ -1,8 +1,8 @@
 export const education = [
   {
     id: 'udg',
-    institution: 'Nombre de la Institución',
-    degree: 'Carrera o grado',
+    institution: 'Preparatoria de Tonala Centro',
+    degree: 'Preparatoria',
     description: 'Descripción opcional.',
     period: '2020-2024',
   },
