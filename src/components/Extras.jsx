@@ -1,3 +1,4 @@
+import styles from './Extras.module.css'
 import { extras } from '../data/extras'
 import { useScrollReveal } from '../hooks/useScrollReveal'
 
@@ -8,24 +9,24 @@ function Extras() {
     <section ref={ref} id="extra" className="seccion revelar">
       <div className="seccion-interior">
         <h2 className="seccion-titulo">Logros y certificados</h2>
-        <div className="extra-grid">
+        <div className={styles.extraGrid}>
           {extras.map((item) => (
-            <div key={item.id} className="extra-card">
-              <div className="extra-img-wrap">
+            <div key={item.id} className={styles.extraCard}>
+              <div className={styles.extraImgWrap}>
                 {item.imageUrl && (
                   <img
                     src={item.imageUrl}
                     alt={item.imageAlt}
-                    className="extra-img"
+                    className={styles.extraImg}
                   />
                 )}
-                <div className="extra-img-placeholder">
+                <div className={styles.extraImgPlaceholder}>
                   {item.placeholder}
                 </div>
               </div>
-              <div className="extra-cuerpo">
-                <p className="extra-titulo">{item.title}</p>
-                <p className="extra-desc">{item.description}</p>
+              <div className={styles.extraCuerpo}>
+                <p className={styles.extraTitulo}>{item.title}</p>
+                <p className={styles.extraDesc}>{item.description}</p>
               </div>
             </div>
           ))}

@@ -1,3 +1,4 @@
+import styles from './Skills.module.css'
 import { skills } from '../data/skills'
 import { useScrollReveal } from '../hooks/useScrollReveal'
 
@@ -8,15 +9,15 @@ function Skills() {
     <section ref={ref} id="tecnologias" className="seccion revelar" aria-labelledby="titulo-tecnologias">
       <div className="seccion-interior">
         <h2 className="seccion-titulo" id="titulo-tecnologias">Tecnologías</h2>
-        <div className="tech-grid">
+        <div className={styles.techGrid}>
           {skills.map((skill) => (
-            <div key={skill.name} className="tech-chip">
+            <div key={skill.name} className={styles.techChip}>
               <img
                 src={skill.svg}
                 alt={skill.name}
-                className="tech-svg"
+                className={styles.techSvg}
               />
-              <span className="tech-nombre">{skill.name}</span>
+              <span className={styles.techNombre}>{skill.name}</span>
             </div>
           ))}
         </div>

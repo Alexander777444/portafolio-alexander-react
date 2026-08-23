@@ -1,0 +1,93 @@
+.lineaTiempo {
+  position: relative;
+  padding-left: 2rem;
+}
+
+.lineaTiempo::before {
+  content: '';
+  position: absolute;
+  left: 6px;
+  top: 8px;
+  bottom: 8px;
+  width: 1.5px;
+  background: linear-gradient(to bottom, #cc0000, #1e1e1e);
+}
+
+.tiempoItem {
+  position: relative;
+  margin-bottom: 2.5rem;
+}
+
+.tiempoItem:last-child {
+  margin-bottom: 0;
+}
+
+.tiempoPunto {
+  position: absolute;
+  left: -2rem;
+  top: 6px;
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  background: #cc0000;
+  border: 2px solid #080808;
+  box-shadow: 0 0 8px #5c0000;
+}
+
+.tiempoContenido {
+  background: #151515;
+  border: 1px solid #1e1e1e;
+  border-radius: 10px;
+  padding: 1.25rem 1.5rem;
+  transition: border-color 0.25s ease;
+}
+
+.tiempoContenido:hover {
+  border-color: #900000;
+}
+
+.tiempoCabecera {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.tiempoTitulo {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #e8e8e8;
+  margin-bottom: 0.2rem;
+}
+
+.tiempoSub {
+  font-size: 0.82rem;
+  color: #cc0000;
+  margin-bottom: 0.4rem;
+  font-family: 'Space Mono', monospace;
+}
+
+.tiempoDesc {
+  font-size: 0.85rem;
+  color: #888888;
+  line-height: 1.6;
+}
+
+.tiempoBadge {
+  flex-shrink: 0;
+  font-family: 'Space Mono', monospace;
+  font-size: 0.7rem;
+  padding: 0.25rem 0.6rem;
+  background: #2b0000;
+  border: 1px solid #900000;
+  border-radius: 999px;
+  color: #cc0000;
+  letter-spacing: 0.05em;
+}
+
+@media (max-width: 768px) {
+  .tiempoCabecera {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+}

@@ -1,16 +1,18 @@
+import styles from './Hero.module.css'
+
 function Hero() {
     return (
-        <header className="hero" id="inicio">
-    <div className="hero-content">
+        <header className={styles.hero} id="inicio">
+    <div className={styles.heroContent}>
 
-      <div className="hero-info">
-        <p className="hero-tag">Software Developer</p>
-        <h2 className="hero-nombre">Hi, I'm <span className="hero-nombre-highlight"> Alexander Bolaños</span>, a passionate frontend developer. aspired to fullstack development.</h2>
-        <p className="hero-ubicacion">
+      <div className={styles.heroInfo}>
+        <p className={styles.heroTag}>Software Developer</p>
+        <h2 className={styles.heroNombre}>Hi, I'm <span className={styles.heroNombreHighlight}> Alexander Bolaños</span>, a passionate frontend developer. aspired to fullstack development.</h2>
+        <p className={styles.heroUbicacion}>
           <span className="icon icon--location icon--sm" aria-hidden="true"></span>
           Guadalajara, México
         </p>
-        <div className="hero-botones">
+        <div className={styles.heroBotones}>
           <a href="mailto:pichipi2015@gmail.com" className="btn btn-primario">
             <span className="icon icon--envelope icon--sm" aria-hidden="true"></span>
             pichipi2015@gmail.com
@@ -28,16 +30,16 @@ function Hero() {
         </div>
       </div>
 
-      <div className="hero-avatar">
+      <div className={styles.heroAvatar}>
         <img src="../Assets/avatarAlexander.jpg" alt="Foto de Alexander Bolaños" id="avatarImg" />
-        <div className="avatar-placeholder" id="avatarPlaceholder" aria-hidden="true">AB</div>
+        <div className={styles.avatarPlaceholder} id="avatarPlaceholder" aria-hidden="true">AB</div>
       </div>
 
     </div>
 
-    <div className="hero-scroll-hint" aria-hidden="true">
+    <div className={styles.heroScrollHint} aria-hidden="true">
       <span>scroll</span>
-      <div className="scroll-line"></div>
+      <div className={styles.scrollLine}></div>
     </div>
   </header>
 
