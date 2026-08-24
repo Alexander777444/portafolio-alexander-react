@@ -12,8 +12,16 @@ function Hero() {
     <div className={styles.heroContent}>
 
       <div className={styles.heroInfo}>
+        <span className={styles.availableBadge}>
+          <span className={styles.availableDot} aria-hidden="true"></span>
+          Available for Internships
+        </span>
         <p className={styles.heroTag}>Software Developer</p>
-        <h2 className={styles.heroNombre}>Hi, I'm <span className={styles.heroNombreHighlight}> Alexander Bolaños</span>, a passionate frontend developer. aspired to fullstack development.</h2>
+        <h1 className={styles.heroNombre}>
+          Hi, I'm <span className={styles.heroNombreHighlight}>Alexander Bolaños</span>.
+          <br />
+          I build web interfaces with React — and I'm expanding into full-stack.
+        </h1>
         <p className={styles.heroUbicacion}>
           <span className="icon icon--location icon--sm" aria-hidden="true"></span>
           Guadalajara, México
@@ -23,21 +31,15 @@ function Hero() {
             <span className="icon icon--envelope icon--sm" aria-hidden="true"></span>
             pichipi2015@gmail.com
           </a>
-          <a href="/Assets/CV_VERSION1.2.pdf" download="CV_Alexander_Bolanos.pdf" className="btn btn-contorno" id="cvBtn" aria-label="Descargar currículum en PDF">
+          <a href="/Assets/CV_VERSION1.2.pdf" download="CV_Alexander_Bolanos.pdf" className="btn btn-contorno" id="cvBtn" aria-label="Download résumé (PDF)">
             <span className="icon icon--file-pdf icon--sm" aria-hidden="true"></span>
             Descargar CV
-          </a>
-          <a href="https://github.com/Alexander777444" target="_blank" rel="noopener noreferrer" className="btn btn-icono" aria-label="GitHub">
-            <span className="icon icon--github icon--md" aria-hidden="true"></span>
-          </a>
-          <a href="https://www.linkedin.com/in/enrique-alexander-bolanos-gutierrez-79b83037a/" target="_blank" rel="noopener noreferrer" className="btn btn-icono" aria-label="LinkedIn">
-            <span className="icon icon--linkedin icon--md" aria-hidden="true"></span>
           </a>
         </div>
       </div>
 
       <div className={styles.heroAvatar}>
-        <img src="/Assets/avatarAlexander2.jpg" alt="Foto de Alexander Bolaños" id="avatarImg" />
+        <img src="/Assets/avatarAlexander2.jpg" alt="Photo of Alexander Bolaños" id="avatarImg" />
         <div className={styles.avatarPlaceholder} id="avatarPlaceholder" aria-hidden="true">AB</div>
       </div>
 

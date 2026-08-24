@@ -8,7 +8,7 @@ function Education() {
   return (
     <section ref={ref} id="formacion" className="seccion revelar">
       <div className="seccion-interior">
-        <h2 className="seccion-titulo">Formación</h2>
+        <h2 className="seccion-titulo">Education</h2>
         <div className={styles.lineaTiempo}>
           {education.map((item) => (
             <div key={item.id} className={styles.tiempoItem}>

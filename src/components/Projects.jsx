@@ -9,7 +9,7 @@ function Projects() {
   return (
     <section ref={ref} id="proyectos" className="seccion revelar" aria-labelledby="titulo-proyectos">
       <div className="seccion-interior">
-        <h2 className="seccion-titulo" id="titulo-proyectos">Proyectos</h2>
+        <h2 className="seccion-titulo" id="titulo-proyectos">Proyects</h2>
         <div className={styles.projectsGrid} id="projectsGrid">
           {projects.map(p => (
             <ProjectCard key={p.id} project={p} />

@@ -8,7 +8,7 @@ function Skills() {
   return (
     <section ref={ref} id="tecnologias" className="seccion revelar" aria-labelledby="titulo-tecnologias">
       <div className="seccion-interior">
-        <h2 className="seccion-titulo" id="titulo-tecnologias">Tecnologías</h2>
+        <h2 className="seccion-titulo" id="titulo-tecnologias">Skills</h2>
         <div className={styles.techGrid}>
           {skills.map((skill) => (
             <div key={skill.name} className={styles.techChip}>

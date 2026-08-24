@@ -8,7 +8,7 @@ function Extras() {
   return (
     <section ref={ref} id="extra" className="seccion revelar">
       <div className="seccion-interior">
-        <h2 className="seccion-titulo">Logros y certificados</h2>
+        <h2 className="seccion-titulo">Achievements & Certificates</h2>
         <div className={styles.extraGrid}>
           {extras.map((item) => (
             <div key={item.id} className={styles.extraCard}>

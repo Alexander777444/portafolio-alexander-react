@@ -1,16 +1,16 @@
 export const education = [
   {
     id: 'udg',
-    institution: 'Universidad De Guadalajara (CUTONALA)',
-    degree: 'Ingenieria en Ciencias Computacionales',
-    description: 'Mi introcución al mundo de la programación y desarrollo de software, aprendiendo a crear aplicaciones web y móviles, así como a trabajar en equipo y resolver problemas complejos, aplicando siempre el conocimiento como Ingeniero.',
+    institution: 'Universidad de Guadalajara (CUTONALA)',
+    degree: 'B.S. in Computer Science Engineering',
+    description: "My introduction to programming and software development — building web and mobile applications, working in teams, and solving complex problems with an engineer's mindset.",
     period: '2020-2024',
   },
   {
-    id: 'prepa',
-    institution: 'Preparatoria de Tonala',
-    degree: 'Bachillerato General por Competencias',
-    description: 'Mi formación académica en el nivel medio superior, donde adquirí conocimientos en diversas áreas del saber, desarrollando habilidades de pensamiento crítico, resolución de problemas y trabajo en equipo.',
+    id: 'bootcamp',
+    institution: 'Preparatoria de Tonalá',
+    degree: 'General High School Diploma (Competency-Based)',
+    description: 'My upper-secondary education, where I built a foundation across multiple subject areas while developing critical thinking, problem-solving, and teamwork skills.',
     period: '2020-2024',
   },
 ];
