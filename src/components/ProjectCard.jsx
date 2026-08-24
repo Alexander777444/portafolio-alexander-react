@@ -1,14 +1,16 @@
+import styles from './Projects.module.css'
+
 function ProjectCard({ project }) {
   return (
-    <article className="project-card glass-card">
+    <div className={styles.projectCard}>
       <h3>{project.title}</h3>
       <p>{project.description}</p>
-      <div className="project-tags">
+      <div className={styles.projectTags}>
         {project.tags.map(tag => (
           <span key={tag} className="project-chip">{tag}</span>
         ))}
       </div>
-    </article>
+    </div>
   )
 }
 export default ProjectCard

@@ -1,3 +1,4 @@
+import styles from './Education.module.css'
 import { education } from '../data/education'
 import { useScrollReveal } from '../hooks/useScrollReveal'
 
@@ -8,20 +9,20 @@ function Education() {
     <section ref={ref} id="formacion" className="seccion revelar">
       <div className="seccion-interior">
         <h2 className="seccion-titulo">Formación</h2>
-        <div className="linea-tiempo">
+        <div className={styles.lineaTiempo}>
           {education.map((item) => (
-            <div key={item.id} className="tiempo-item">
-              <div className="tiempo-punto" />
-              <div className="tiempo-contenido glass-card">
-                <div className="tiempo-cabecera">
+            <div key={item.id} className={styles.tiempoItem}>
+              <div className={styles.tiempoPunto} />
+              <div className={styles.tiempoContenido}>
+                <div className={styles.tiempoCabecera}>
                   <div>
-                    <p className="tiempo-titulo">{item.institution}</p>
-                    <p className="tiempo-sub">{item.degree}</p>
+                    <p className={styles.tiempoTitulo}>{item.institution}</p>
+                    <p className={styles.tiempoSub}>{item.degree}</p>
                     {item.description && (
-                      <p className="tiempo-desc">{item.description}</p>
+                      <p className={styles.tiempoDesc}>{item.description}</p>
                     )}
                   </div>
-                  <span className="tiempo-badge">{item.period}</span>
+                  <span className={styles.tiempoBadge}>{item.period}</span>
                 </div>
               </div>
             </div>
