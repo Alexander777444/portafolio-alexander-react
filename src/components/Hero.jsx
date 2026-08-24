@@ -17,7 +17,7 @@ function Hero() {
             <span className="icon icon--envelope icon--sm" aria-hidden="true"></span>
             pichipi2015@gmail.com
           </a>
-          <a href="../Assets/CV_VERSION1.2.pdf" download="CV_Alexander_Bolanos.pdf" className="btn btn-contorno" id="cvBtn" aria-label="Descargar currículum en PDF">
+          <a href="/Assets/CV_VERSION1.2.pdf" download="CV_Alexander_Bolanos.pdf" className="btn btn-contorno" id="cvBtn" aria-label="Descargar currículum en PDF">
             <span className="icon icon--file-pdf icon--sm" aria-hidden="true"></span>
             Descargar CV
           </a>
@@ -31,7 +31,7 @@ function Hero() {
       </div>
 
       <div className={styles.heroAvatar}>
-        <img src="../Assets/avatarAlexander.jpg" alt="Foto de Alexander Bolaños" id="avatarImg" />
+        <img src="/Assets/avatarAlexander2.jpg" alt="Foto de Alexander Bolaños" id="avatarImg" />
         <div className={styles.avatarPlaceholder} id="avatarPlaceholder" aria-hidden="true">AB</div>
       </div>
 
