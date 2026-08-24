@@ -7,7 +7,7 @@ function ProjectCard({ project }) {
       <p>{project.description}</p>
       <div className={styles.projectTags}>
         {project.tags.map(tag => (
-          <span key={tag} className="tag">{tag}</span>
+          <span key={tag} className="project-chip">{tag}</span>
         ))}
       </div>
     </div>

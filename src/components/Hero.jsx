@@ -1,8 +1,14 @@
 import styles from './Hero.module.css'
+import { useRef } from 'react'
+import { useCursorGlow } from '../hooks/useCursorGlow'
 
 function Hero() {
-    return (
-        <header className={styles.hero} id="inicio">
+  const heroRef = useRef(null)
+  const isCursorActive = useCursorGlow(heroRef)
+
+  return (
+  <header ref={heroRef} className={styles.hero} id="inicio">
+    <div className={`${styles.cursorGlow} ${isCursorActive ? styles.isActive : ''}`} aria-hidden="true" />
     <div className={styles.heroContent}>
 
       <div className={styles.heroInfo}>
@@ -35,16 +41,14 @@ function Hero() {
         <div className={styles.avatarPlaceholder} id="avatarPlaceholder" aria-hidden="true">AB</div>
       </div>
 
-    </div>
+      </div>
 
-    <div className={styles.heroScrollHint} aria-hidden="true">
-      <span>scroll</span>
-      <div className={styles.scrollLine}></div>
-    </div>
-  </header>
-
-    )
-
+      <div className={styles.heroScrollHint} aria-hidden="true">
+        <span>scroll</span>
+        <div className={styles.scrollLine}></div>
+      </div>
+    </header>
+  )
 }
 
 export default Hero
