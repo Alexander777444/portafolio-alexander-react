@@ -33,7 +33,7 @@ function Hero() {
           </a>
           <a href="/Assets/CV_VERSION1.2.pdf" download="CV_Alexander_Bolanos.pdf" className="btn btn-contorno" id="cvBtn" aria-label="Download résumé (PDF)">
             <span className="icon icon--file-pdf icon--sm" aria-hidden="true"></span>
-            Descargar CV
+            Download CV
           </a>
         </div>
       </div>

@@ -27,7 +27,7 @@ export const projects = [
     id: 'Apprender',
     title: 'Apprender',
     subtitle: 'Learning app for elementary school students.',
-    description: 'An application to help students from first to sixth grade reinforce their math and English skills.',
+    description: 'An application to help students from first to sixth grade reinforce their math and English skills, Winner of the 2026 BOBathon-IBM.',
     tags: ['React', 'CSS', 'Vite','Node.JS', 'Express.js', 'MongoDB'],
     demoUrl: 'https://ap-prender-client.vercel.app/',
     codeUrl: 'https://github.com/lilbovio/ApPrender',
