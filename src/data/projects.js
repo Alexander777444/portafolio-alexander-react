@@ -2,8 +2,8 @@ export const projects = [
   {
     id: 'michangarro',
     title: 'MiChangarro',
-    subtitle: 'App  para dar a conocer pequeños negocios locales sin pagar publicidad en redes sociales.',
-    description: 'MiChangarro es una aplicación web diseñada para ayudar a pequeños negocios locales a ganar visibilidad sin necesidad de invertir en publicidad en redes sociales. La plataforma permite a los usuarios descubrir y apoyar a estos negocios, fomentando el crecimiento de la comunidad local.',
+    subtitle: 'App to help small local businesses gain visibility without paying for social media ads.',
+    description: 'MiChangarro is a web application designed to help small local businesses gain visibility without investing in social media advertising. The platform lets users discover and support these businesses, fostering local community growth.',
     tags: ['HTML', 'CSS', 'JavaScript', 'Node.JS', 'Express.js', 'MongoDB', 'Vite', 'ReactJS'],
     demoUrl: '#',
     codeUrl: 'https://github.com/Alexander777444',
@@ -14,8 +14,8 @@ export const projects = [
   {
     id: 'portafolio',
     title: 'Portafolio-Alexander',
-    subtitle: 'Es este mismo portafolio',
-    description: 'Portafolio personal construido con HTML, CSS y JavaScript vanilla.',
+    subtitle: 'This very portfolio.',
+    description: 'Personal portfolio built with React, CSS, and Vite.',
     tags: ['React', 'CSS', 'Vite'],
     demoUrl: '#',
     codeUrl: 'https://github.com/Alexander777444/Portafolio-Alexander',
@@ -26,8 +26,8 @@ export const projects = [
   {
     id: 'Apprender',
     title: 'Apprender',
-    subtitle: 'Aplicación de aprendizaje para niños de primaria',
-    description: 'Aplicacion para ayudar a ninos de primaria de primer grado hasta sexto grado a reforzar sus conocimientos en matematicas e ingles',
+    subtitle: 'Learning app for elementary school students.',
+    description: 'An application to help students from first to sixth grade reinforce their math and English skills, Winner of the 2026 BOBathon-IBM.',
     tags: ['React', 'CSS', 'Vite','Node.JS', 'Express.js', 'MongoDB'],
     demoUrl: 'https://ap-prender-client.vercel.app/',
     codeUrl: 'https://github.com/lilbovio/ApPrender',

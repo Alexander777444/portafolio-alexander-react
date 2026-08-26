@@ -10,7 +10,7 @@ function Footer() {
         <a href="https://github.com/Alexander777444" target="_blank" rel="noopener noreferrer">GitHub</a>
         <a href="https://www.linkedin.com/in/enrique-alexander-bolanos-gutierrez-79b83037a/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
       </div>
-      <p className={styles.pieCopia}>Hecho con dedicación · {new Date().getFullYear()}</p>
+      <p className={styles.pieCopia}>Built with dedication · {new Date().getFullYear()}</p>
     </div>
   </footer>
 
