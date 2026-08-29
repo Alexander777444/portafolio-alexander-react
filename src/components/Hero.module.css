@@ -9,24 +9,43 @@
   overflow: hidden;
 }
 
-.cursorGlow {
+.cursorTrailLayer {
   position: absolute;
-  width: 500px;
-  height: 500px;
-  border-radius: 50%;
-  background: radial-gradient(circle, rgba(220, 38, 38, 0.25), transparent 70%);
-  filter: blur(40px);
+  inset: 0;
   pointer-events: none;
-  left: var(--x, 50%);
-  top: var(--y, 50%);
-  transform: translate(-50%, -50%);
-  opacity: 0;
-  transition: opacity 0.3s ease;
+  overflow: hidden;
   z-index: 0;
 }
 
-.cursorGlow.isActive {
-  opacity: 1;
+.cursorBlob {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  background: linear-gradient(
+    #ff5a1f 0%,
+    #ff0000 20%,
+    #cc2200 40%,
+    #900000 60%,
+    transparent 90%);
+  filter: blur(24px);
+  opacity: 0.55;
+  animation: blobFade 2s ease-out forwards;
+}
+
+@keyframes blobFade {
+  0% {
+    opacity: 0.55;
+    transform: translate(-50%, -50%) scale(0.8);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(1.6);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cursorBlob {
+    display: none;
+  }
 }
 
 .hero::before {
@@ -117,8 +136,18 @@
   letter-spacing: -0.02em;
 }
 
+.heroNombre:hover {
+  color:#cc0000;
+  transition: color 0.4s ease;
+}
+
 .heroNombreHighlight {
-  color: #cc0000;
+  color: #900000;
+}
+
+.heroNombreHighlight:hover{
+  color: #e8e8e8;
+  transition: color 0.6s ease;
 }
 
 .heroUbicacion {

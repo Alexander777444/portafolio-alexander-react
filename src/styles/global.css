@@ -87,11 +87,13 @@ ul { list-style: none; }
 
 .icon { display: inline-block; width: 1em; height: 1em; flex-shrink: 0; background-color: currentColor; -webkit-mask: no-repeat center / contain; mask: no-repeat center / contain; }
 .icon--github { -webkit-mask-image: url(../../Assets/icons/github.svg); mask-image: url(../../Assets/icons/github.svg); }
-.icon--linkedin { -webkit-mask-image: url(../../Assets/icons/linkedin.svg); mask-image: url(../../Assets/icons/linkedin.svg); }
+.icon--linkedin { -webkit-mask-image: url(../../Assets/icons/linkedin-black.svg); mask-image: url(../../Assets/icons/linkedin-black.svg); }
 .icon--envelope { -webkit-mask-image: url(../../Assets/icons/envelope.svg); mask-image: url(../../Assets/icons/envelope.svg); }
-.icon--file-pdf { -webkit-mask-image: url(../../Assets/icons/file-pdf.svg); mask-image: url(../../Assets/icons/file-pdf.svg); }
+.icon--file-pdf { -webkit-mask-image: url(../../Assets/icons/file-icon.svg); mask-image: url(../../Assets/icons/file-icon.svg); }
 .icon--location { -webkit-mask-image: url(../../Assets/icons/location-dot.svg); mask-image: url(../../Assets/icons/location-dot.svg); }
 .icon--laptop-code { -webkit-mask-image: url(../../Assets/icons/laptop-code.svg); mask-image: url(../../Assets/icons/laptop-code.svg); }
+.icon--logo-name { -webkit-mask-image: url(../../Assets/icons/logo-name.svg); mask-image: url(../../Assets/icons/logo-name.svg); }
+.icon--logo-name-black { -webkit-mask-image: url(../../Assets/icons/logo-name-black.svg); mask-image: url(../../Assets/icons/logo-name-black.svg); }
 .icon--sm { width: 14px; height: 14px; }
 .icon--md { width: 16px; height: 16px; }
 .icon--nav { width: 22px; height: 22px; }

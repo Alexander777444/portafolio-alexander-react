@@ -6,11 +6,12 @@ function Navbar() {
   return (
     <nav id="navbar" className={scrolled ? 'navbar scrolled' : 'navbar'} aria-label="Main navigation">
       <a href="#inicio" className="nav-logo">
-        <span className="icon icon--laptop-code icon--nav" aria-hidden="true"></span>
+        <span className="icon icon--logo-name-black icon--nav" aria-hidden="true"></span>
         <span>AB</span>
       </a>
 
       <ul className={menuOpen ? 'nav-links abierto' : 'nav-links'} id="nav-links">
+        <li><a href="#inicio" className={activeSection === 'inicio' ? 'activo' : ''} onClick={closeMenu}>Me</a></li>
         <li><a href="#sobre-mi" className={activeSection === 'sobre-mi' ? 'activo' : ''} onClick={closeMenu}>About</a></li>
         <li><a href="#tecnologias" className={activeSection === 'tecnologias' ? 'activo' : ''} onClick={closeMenu}>Skills</a></li>
         <li><a href="#proyectos" className={activeSection === 'proyectos' ? 'activo' : ''} onClick={closeMenu}>Projects</a></li>
