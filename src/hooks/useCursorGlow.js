@@ -1,58 +1,55 @@
-import { useEffect, useState } from 'react'
+import { useCallback, useEffect, useRef, useState } from 'react'
 
-export function useCursorGlow(containerRef) {
-  const [isActive, setIsActive] = useState(false)
+let idCounter = 0
+const SPAWN_INTERVAL = 90 // ms mínimo entre manchas nuevas
+const LIFETIME = 1600 // ms que dura cada mancha antes de desaparecer
+const MAX_BLOBS = 24
+
+export function useCursorGlow() {
+  const [blobs, setBlobs] = useState([])
+  const containerRef = useRef(null)
+  const lastSpawn = useRef(0)
+  const canAnimateRef = useRef(null)
+  const timeouts = useRef(new Set())
 
   useEffect(() => {
-    const element = containerRef.current
-    if (!element || typeof window === 'undefined' || typeof window.matchMedia !== 'function') {
-      return undefined
-    }
-
-    const mediaQuery = window.matchMedia('(pointer: fine)')
-    if (!mediaQuery.matches) {
-      return undefined
-    }
-
-    let rafId = null
-
-    const updateGlow = (event) => {
-      if (rafId !== null) {
-        return
-      }
-
-      rafId = window.requestAnimationFrame(() => {
-        const rect = element.getBoundingClientRect()
-        const x = ((event.clientX - rect.left) / rect.width) * 100
-        const y = ((event.clientY - rect.top) / rect.height) * 100
-
-        element.style.setProperty('--x', `${x.toFixed(2)}%`)
-        element.style.setProperty('--y', `${y.toFixed(2)}%`)
-        rafId = null
-      })
-    }
-
-    const handleEnter = () => setIsActive(true)
-    const handleLeave = () => {
-      setIsActive(false)
-      element.style.setProperty('--x', '50%')
-      element.style.setProperty('--y', '50%')
-    }
-
-    element.addEventListener('mousemove', updateGlow)
-    element.addEventListener('mouseenter', handleEnter)
-    element.addEventListener('mouseleave', handleLeave)
-
     return () => {
-      element.removeEventListener('mousemove', updateGlow)
-      element.removeEventListener('mouseenter', handleEnter)
-      element.removeEventListener('mouseleave', handleLeave)
-
-      if (rafId !== null) {
-        window.cancelAnimationFrame(rafId)
-      }
+      timeouts.current.forEach(clearTimeout)
+      timeouts.current.clear()
     }
-  }, [containerRef])
+  }, [])
 
-  return isActive
+  const handleMove = useCallback((e) => {
+    if (canAnimateRef.current === null) {
+      canAnimateRef.current =
+        window.matchMedia('(pointer: fine)').matches &&
+        !window.matchMedia('(prefers-reduced-motion: reduce)').matches
+    }
+    if (!canAnimateRef.current) return
+
+    const now = performance.now()
+    if (now - lastSpawn.current < SPAWN_INTERVAL) return
+    lastSpawn.current = now
+
+    const rect = containerRef.current?.getBoundingClientRect()
+    if (!rect) return
+
+    const id = idCounter++
+    const x = e.clientX - rect.left
+    const y = e.clientY - rect.top
+    const size = 70 + Math.random() * 60
+
+    setBlobs(prev => {
+      const next = [...prev, { id, x, y, size }]
+      return next.length > MAX_BLOBS ? next.slice(next.length - MAX_BLOBS) : next
+    })
+
+    const t = setTimeout(() => {
+      setBlobs(prev => prev.filter(b => b.id !== id))
+      timeouts.current.delete(t)
+    }, LIFETIME)
+    timeouts.current.add(t)
+  }, [])
+
+  return { containerRef, blobs, handleMove }
 }

@@ -1,14 +1,25 @@
 import styles from './Hero.module.css'
-import { useRef } from 'react'
 import { useCursorGlow } from '../hooks/useCursorGlow'
 
 function Hero() {
-  const heroRef = useRef(null)
-  const isCursorActive = useCursorGlow(heroRef)
+  const { containerRef, blobs, handleMove } = useCursorGlow()
 
   return (
-  <header ref={heroRef} className={styles.hero} id="inicio">
-    <div className={`${styles.cursorGlow} ${isCursorActive ? styles.isActive : ''}`} aria-hidden="true" />
+  <header ref={containerRef} className={styles.hero} id="inicio" onMouseMove={handleMove}>
+    <span className={styles.cursorTrailLayer} aria-hidden="true">
+      {blobs.map(b => (
+        <span
+          key={b.id}
+          className={styles.cursorBlob}
+          style={{
+            left: `${b.x}px`,
+            top: `${b.y}px`,
+            width: `${b.size}px`,
+            height: `${b.size}px`,
+          }}
+        />
+      ))}
+    </span>
     <div className={styles.heroContent}>
 
       <div className={styles.heroInfo}>
