@@ -27,9 +27,9 @@ function Hero() {
           Guadalajara, México
         </p>
         <div className={styles.heroBotones}>
-          <a href="mailto:pichipi2015@gmail.com" className="btn btn-primario">
+          <a href="#proyectos" className="btn btn-primario">
             <span className="icon icon--envelope icon--sm" aria-hidden="true"></span>
-            pichipi2015@gmail.com
+            View my Work
           </a>
           <a href="/Assets/CV_VERSION1.2.pdf" download="CV_Alexander_Bolanos.pdf" className="btn btn-contorno" id="cvBtn" aria-label="Download résumé (PDF)">
             <span className="icon icon--file-pdf icon--sm" aria-hidden="true"></span>
